@@ -1,15 +1,14 @@
-# Codegreen
+# Demo angular project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
-## An Angular TaskKiller
+## Requerimientos
 
-This is a little project I created to explore Angular some more.
+* Nodejs >= 6
 
-![alt text](screen.png "Screenshot of the app.")
 
-### What does it do?
+## Pruebas funcionales
+* npm run e2e
 
-It's a small app that enables you to keep track of your `TODOS` with a list of tasks ordered by priority. You can add and delete tasks, simple as that!
+## Referencias
 
-Visit [the github page](https://artusvranken.github.io/codegreen) for this project and play around yourself!
+* https://automationpanda.com/2017/01/27/bdd-101-gherkin-by-example/

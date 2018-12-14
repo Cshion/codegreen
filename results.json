@@ -1,0 +1,70 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "App Home",
+    "line": 1,
+    "id": "app-home",
+    "tags": [],
+    "uri": "e2e\\features\\app.feature",
+    "elements": [
+      {
+        "id": "app-home;como-usuario-quiero-revisar-el-home",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Como usuario quiero revisar el home",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e\\stepdefinitions\\app.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "entramos al home de la aplicacion",
+            "match": {
+              "location": "e2e\\stepdefinitions\\app.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "el titulo dice \"codegreen - an Angular taskkiller!\"",
+            "match": {
+              "location": "e2e\\stepdefinitions\\app.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4339000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
