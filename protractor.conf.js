@@ -16,7 +16,7 @@ exports.config = {
   
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
-  
+  restartBrowserBetweenTests : true,
   cucumberOpts: {
     require: ['./e2e/stepdefinitions/**/*.steps.ts'],
     format: 'json:results.json',

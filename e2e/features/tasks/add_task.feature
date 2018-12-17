@@ -1,12 +1,12 @@
 Feature: Añadir tareas
 
     Scenario Outline: Añadir una tarea a la lista
-        Given el usuario esta en el home de la aplicacion
+        Given el usuario esta en la vista de añadir tareas
         When el usuario crea una tarea de tipo "<tipo>" y descripcion "<descripcion>"
-        Then la tarea se muestra en la tabla en la parte de "green"
+        Then la tarea "<descripcion>" se muestra en la tabla en la seccion "<tipo>"
 
-        Example:
+        Examples:
             | tipo   | descripcion                           |
-            | green  | Esta es una tarea verde de ejemplo    |
-            | red    | Esta es una tarea rojo de ejemplo     |
-            | yellow | Esta es una tarea amarilla de ejemplo |
+            | Green  | Esta es una tarea verde de ejemplo    |
+            | Yellow | Esta es una tarea amarilla de ejemplo |
+            | Red    | Esta es una tarea roja de ejemplo     |
