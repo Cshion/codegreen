@@ -7,6 +7,6 @@ Feature: Añadir tareas
 
         Examples:
             | tipo   | descripcion                           |
+            | Red    | Esta es una tarea roja de ejemplo     |
             | Green  | Esta es una tarea verde de ejemplo    |
             | Yellow | Esta es una tarea amarilla de ejemplo |
-            | Red    | Esta es una tarea roja de ejemplo     |

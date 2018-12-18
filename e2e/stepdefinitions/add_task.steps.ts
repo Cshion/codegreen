@@ -18,10 +18,10 @@ When('el usuario crea una tarea de tipo {string} y descripcion {string}',async f
     await browser.wait(ExpectedConditions.visibilityOf(addTaskpage.descriptionInput),20*1000);
     await browser.wait(ExpectedConditions.visibilityOf(addTaskpage.priorityInput),20*1000);
 
+
     await addTaskpage.setTaskDescription(descripcion);
     await addTaskpage.setTaskPriority(tipo);
-    
-    //browser.sleep(5000);
+
     //await addTaskpage.setTaskPriority(tipo);
     //return true;
 });
