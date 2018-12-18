@@ -22,19 +22,7 @@ exports.config = {
     format: 'json:results.json',
     strict: true
   },
-
-  suites: {
-    todo: [
-      './e2e/contact_search/**/*.steps.js',
-      './e2e/venue_search/**/*.steps.js'
-    ]
-  },
-
-  jasmineNodeOpts: {
-    showColors: true,
-    defaultTimeoutInterval: 30000,
-    print: function() {}
-  },
+  
   onPrepare() {
     require('ts-node').register({
       project: 'e2e/tsconfig.e2e.json'

@@ -1,33 +1,35 @@
-import {expect} from 'chai';
+import { expect } from 'chai';
 import { AddTaskPage } from '../pages/add_task.po';
-import {Before,Given,When,Then} from 'cucumber';
+import { HomePage } from '../pages/home.po';
+import { Before,Given,When,Then } from 'cucumber';
 import { browser, ExpectedConditions } from 'protractor';
 
 let addTaskpage: AddTaskPage;
+let homePage   : HomePage;
 
 Before(() => {
     addTaskpage = new AddTaskPage();
+    homePage    = new HomePage();
+
 });
 
 Given('el usuario esta en la vista de añadir tareas', async function () {
-    await addTaskpage.navigateTo("task");
-    return true;
+    await addTaskpage.get("/task");
 });
 
-When('el usuario crea una tarea de tipo {string} y descripcion {string}',async function (tipo, descripcion) {
+When('el usuario crea una tarea de color {string} y descripcion {string}',async function (color, descripcion) {
     await browser.wait(ExpectedConditions.visibilityOf(addTaskpage.descriptionInput),20*1000);
     await browser.wait(ExpectedConditions.visibilityOf(addTaskpage.priorityInput),20*1000);
 
 
     await addTaskpage.setTaskDescription(descripcion);
-    await addTaskpage.setTaskPriority(tipo);
-
-    //await addTaskpage.setTaskPriority(tipo);
-    //return true;
+    await addTaskpage.setTaskPriority(color);
+    await addTaskpage.submitNewTask();
 });
 
-Then('la tarea {string} se muestra en la tabla en la seccion {string}', function (descripcion, tipo) {
-    // Write code here that turns the phrase above into concrete actions
-    console.log(tipo,descripcion);
-    return true;
+Then('la tarea {string} se muestra en la tabla en la seccion {string}', async function (descripcion, color) {
+    let exists = await homePage.existsTaskByDescription(color,descripcion);
+
+    return expect(exists).to.be.equal(true);
 });
+

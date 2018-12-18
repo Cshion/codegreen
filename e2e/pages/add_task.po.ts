@@ -1,11 +1,11 @@
-import { browser, by, element } from 'protractor';
+import { browser, by, element,ElementFinder } from 'protractor';
 import { BasePage } from './basepage.po'
 import { WebElement } from 'selenium-webdriver';
 
 export class AddTaskPage extends BasePage{
-  submitButton: any;
-  descriptionInput: any;
-  priorityInput: any;
+  submitButton    : ElementFinder;
+  descriptionInput: ElementFinder;
+  priorityInput   : any;
   
   constructor(){
     super();
@@ -20,7 +20,8 @@ export class AddTaskPage extends BasePage{
 
   async setTaskPriority(priority){
     let options = await this.priorityInput.all(by.tagName('option'));
-    let textOptions = await Promise.all(options.map(async (o) => {
+    //NOTE: Esta busqueda puede ser mejorada
+    let textOptions = await Promise.all(options.map(async (o : ElementFinder) => {
       return await o.getText();
     }));
 
@@ -28,7 +29,7 @@ export class AddTaskPage extends BasePage{
     await options[indexOption].click();
   }
 
-  submitNewTask(){
-
+  async submitNewTask(){
+    await this.submitButton.element(by.tagName('button')).click();
   }
 }
