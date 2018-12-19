@@ -1,0 +1,115 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Eliminar tareas",
+    "line": 1,
+    "id": "eliminar-tareas",
+    "tags": [],
+    "uri": "e2e\\features\\delete_task.feature",
+    "elements": [
+      {
+        "id": "eliminar-tareas;eliminar-una-tarea-a-la-lista",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Eliminar una tarea a la lista",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e\\stepdefinitions\\delete_task.steps.ts:9"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "el usuario esta en la vista de añadir tareas",
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1217000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "el usuario crea una tarea de color \"Green\" y descripcion \"Esto es una descripcion de ejemplo\"",
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 724000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "el usuario elimina la tarea \"Esto es una descripcion de ejemplo\" de la seccion \"Green\"",
+            "match": {
+              "location": "e2e\\stepdefinitions\\delete_task.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 231000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "la tarea \"Esto es una descripcion de ejemplo\" no se muestra en la tabla en la seccion \"Green\"",
+            "match": {
+              "location": "e2e\\stepdefinitions\\delete_task.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 108000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "70.0.3538.110"
+      },
+      "device": "",
+      "platform": {
+        "name": "",
+        "version": ""
+      }
+    }
+  }
+]

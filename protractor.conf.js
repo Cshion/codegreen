@@ -19,10 +19,18 @@ exports.config = {
 
   cucumberOpts: {
     require: ['./e2e/stepdefinitions/**/*.steps.ts'],
-    format: 'json:results.json',
+    format: 'json:./cucumber_results/results.json',
     strict: true
   },
-  
+
+  plugins: [{
+    package: 'protractor-multiple-cucumber-html-reporter-plugin',
+    options:{
+        automaticallyGenerateReport: true,
+        removeExistingJsonReportFile: true
+    }
+  }],
+
   onPrepare() {
     require('ts-node').register({
       project: 'e2e/tsconfig.e2e.json'

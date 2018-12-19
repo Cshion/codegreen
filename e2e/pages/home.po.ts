@@ -13,30 +13,33 @@ export class HomePage extends BasePage{
     this.tasksList["Yellow"]      = element(by.id('tasks-yellow')).element(by.tagName('table')).element(by.tagName('tbody')).all(by.tagName('tr'));
   }
   
+  async findItemsByDescription(taskList,description){
+    let taskFiltered = await taskList.filter(function(el,index){
+      let tdDescription = el.all(by.tagName("td")).first();
+        return tdDescription.getText().then(function(txt){
+          return txt == description;
+        });
+      });
+
+    return taskFiltered;
+  }
+
   async existsTaskByDescription(color,description){
     if(!this.tasksList[color]){
       throw new Error("Color no implementado");
     }
 
-    let values = await this.tasksList[color].getText();
-    let val = values.find(el => el == description);
-    
-    return !!val;
+    let taskFiltered = await this.findItemsByDescription(this.tasksList[color],description);
+    return !!taskFiltered[0];
   }
 
-  async findIndexTaskByDescription(color,description){
+  async deleteItem(color,description){
     if(!this.tasksList[color]){
       throw new Error("Color no implementado");
     }
     
-    let taskList : ElementArrayFinder = this.tasksList[color];
-    let taskFiltered = await taskList.filter(function(el,index){
-    let tdDescription = el.all(by.tagName("td")).first();
-      return tdDescription.getText().then(function(txt){
-        return txt == description;
-      });
-    });
+    let taskFiltered = await this.findItemsByDescription(this.tasksList[color],description);
 
-    console.log(await taskFiltered[0].getText());
+    await taskFiltered[0].element(by.className("remove-task")).click();
   }
 }

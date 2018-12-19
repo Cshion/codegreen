@@ -16,10 +16,11 @@ Given('el usuario esta en la vista home', async function () {
 });
 
 When('el usuario elimina la tarea {string} de la seccion {string}', async function (descripcion, color) {
-    await homePage.findIndexTaskByDescription(color,descripcion);
-    await browser.sleep(20000);
+    await homePage.deleteItem(color,descripcion);
 });
 
 Then('la tarea {string} no se muestra en la tabla en la seccion {string}', async function (descripcion, color) {
-    return true;
+    let exists = await homePage.existsTaskByDescription(color,descripcion);
+    
+    return expect(exists).to.be.equal(false);
 });

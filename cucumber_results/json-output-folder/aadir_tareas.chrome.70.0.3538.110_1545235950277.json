@@ -1,0 +1,265 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Añadir tareas",
+    "line": 1,
+    "id": "añadir-tareas",
+    "tags": [],
+    "uri": "e2e\\features\\add_task.feature",
+    "elements": [
+      {
+        "id": "añadir-tareas;añadir-una-tarea-a-la-lista",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Añadir una tarea a la lista",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e\\stepdefinitions\\delete_task.steps.ts:9"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "el usuario esta en la vista de añadir tareas",
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4499000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "el usuario crea una tarea de color \"Red\" y descripcion \"Esta es una tarea roja de ejemplo\"",
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 755000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "la tarea \"Esta es una tarea roja de ejemplo\" se muestra en la tabla en la seccion \"Red\"",
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 161000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "añadir-tareas;añadir-una-tarea-a-la-lista",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Añadir una tarea a la lista",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e\\stepdefinitions\\delete_task.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "el usuario esta en la vista de añadir tareas",
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 754000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "el usuario crea una tarea de color \"Green\" y descripcion \"Esta es una tarea verde de ejemplo\"",
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 698000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "la tarea \"Esta es una tarea verde de ejemplo\" se muestra en la tabla en la seccion \"Green\"",
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 159000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "añadir-tareas;añadir-una-tarea-a-la-lista",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Añadir una tarea a la lista",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e\\stepdefinitions\\delete_task.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "el usuario esta en la vista de añadir tareas",
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 723000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "el usuario crea una tarea de color \"Yellow\" y descripcion \"Esta es una tarea amarilla de ejemplo\"",
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 731000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "la tarea \"Esta es una tarea amarilla de ejemplo\" se muestra en la tabla en la seccion \"Yellow\"",
+            "match": {
+              "location": "e2e\\stepdefinitions\\add_task.steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 158000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "70.0.3538.110"
+      },
+      "device": "",
+      "platform": {
+        "name": "",
+        "version": ""
+      }
+    }
+  }
+]
